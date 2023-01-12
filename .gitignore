@@ -1,1 +1,10 @@
+# node
 node_modules
+
+# next
+out
+.next
+
+
+.env
+.env.local
