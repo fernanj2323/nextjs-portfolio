@@ -25,7 +25,7 @@ const PostCard = ({post}) => (
 
 
 const Blog = () =>  (
-    <Layout footer={false} dark title="My blog "> 
+    <Layout footer={false}  title="My blog "> 
         <div className="row">
             {
                 posts.map( (post, index) => (

@@ -13,7 +13,7 @@ const Post = () => {
   
     return (
       <Layout title={router.query.title} footer={false}>
-        <div className="text-center">
+        {/* <div className="text-center">
           <img
             src={currentPost.imageURL}
             alt=""
@@ -21,7 +21,7 @@ const Post = () => {
             className="img-fluid"
           />
           <p className="p-4">{currentPost.content}</p>
-        </div>
+        </div> */}
       </Layout>
     );
   };

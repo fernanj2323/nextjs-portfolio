@@ -5,17 +5,25 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next"
+    "dev": "next", 
+    "build":"next build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "bootstrap-icons": "^1.10.3",
     "bootswatch": "^5.2.3",
+    "chart.js": "3.3.2",
     "classnames": "^2.3.2",
+    "gpt3": "^2.1.1",
     "next": "^13.1.1",
+    "next-themes": "^0.2.1",
     "nprogress": "^0.2.0",
+    "openai": "^3.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6"
   }
 }

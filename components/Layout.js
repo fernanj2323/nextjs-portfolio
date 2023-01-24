@@ -3,9 +3,10 @@ import { useEffect } from "react"
 import { useRouter } from "next/router"
 import nProgress from "nprogress"
 import classNames from "classnames"
+import { useTheme } from 'next-themes'
 
 const Layout = ({ children, title, footer = true, dark = false  }) => {
-
+    const { theme, setTheme } = useTheme()
     const router = useRouter()
 
     useEffect(() =>{
@@ -25,14 +26,16 @@ const Layout = ({ children, title, footer = true, dark = false  }) => {
     
     return(
         // className={dark ? 'bg-dark' : ''}
-        <div  className={classNames({'bg-dark': dark, 'bg-light': !dark })}>
+        //  className={classNames({'bg-dark': dark, 'bg-light': !dark })}
+        <div   className={classNames(' ', {'bg-dark-wall': theme == 'dark'})}>
      
             <Navbar />
             <main className="container py-4"> 
 
             {
             title && (
-                <h1 className={classNames('text-center', {'text-light': dark})}>
+                // className={classNames('text-center', {'text-light': dark})}
+                <h1 >
                         {title}
                 </h1>
             )

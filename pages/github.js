@@ -1,18 +1,22 @@
 import Layout from "../components/Layout";
 import _error from "./_error";
+
+import { useTheme } from 'next-themes'
+import classNames from "classnames"
+
 const Github = ({user, statusCode}) => {
 
-
+    const { theme, setTheme } = useTheme()
     if (statusCode){ 
         return <Error  statusCode={statusCode} /> 
     }
     return (
         <>
-        <Layout footer={false} dark > 
+        <Layout footer={false}  > 
          
-            <div className="row">
-                <div className="col-md-4 offset-md-4">
-                     <div className="card card-body text-center">
+            <div className="row github-box">
+                <div className="col-md-4 offset-md-4 githubcard">
+                     <div className={classNames(' card card-body ', {'bg-dark': theme == 'dark'})}>
                            <h1>{user.name}</h1>
                         <img src={user.avatar_url} alt="" />
                         <p>{user.bio}</p>

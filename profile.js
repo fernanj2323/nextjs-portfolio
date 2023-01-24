@@ -1,19 +1,19 @@
 export const skills = [
     {
         skill: "Angular JS",
-        percentage: 85, 
+        percentage: 75, 
     },
     {
         skill: "Node JS",
-        percentage: 85, 
+        percentage: 80, 
     },
     {
         skill: "Mongo DB",
-        percentage: 85, 
+        percentage: 65, 
     },
     {
         skill: "Docker",
-        percentage: 80, 
+        percentage: 70, 
     },
     {
         skill: "Javascript",
@@ -21,11 +21,11 @@ export const skills = [
     },
     {
         skill: "Python",
-        percentage: 65, 
+        percentage: 55, 
     },
     {
         skill: "Blockchain",
-        percentage: 60, 
+        percentage: 50, 
     },
     {
         skill: "HTML",
@@ -49,40 +49,40 @@ export const skills = [
     },
     {
         skill: "React",
-        percentage: 30, 
+        percentage: 50, 
     },
     {
         skill: "Next JS",
-        percentage: 30, 
+        percentage: 60, 
     },
     {
         skill: "Solidity",
-        percentage: 30, 
+        percentage: 40, 
     },
     {
         skill: "Sockets",
-        percentage: 20, 
+        percentage: 64, 
     },
     {
         skill: "Laravel",
-        percentage: 20, 
+        percentage: 30, 
     },
 
 ]
 
 
 export const experiences = [
-    {
-        title: "Support Engineer",
-        description: [
-          {item: "Configuracion de routers y swtiches cisco"}, 
-          {item: "Configuracion de dispositivos VOIP"},
-          {item: "Tareas de soporte"},
-        ], 
-        from:"Oct 2017", 
-        to:"Feb 2018", 
-        location:"Epower, Caracas - Venezuela"
-    },
+    // {
+    //     title: "Support Engineer",
+    //     description: [
+    //       {item: "Configuracion de routers y swtiches cisco"}, 
+    //       {item: "Configuracion de dispositivos VOIP"},
+    //       {item: "Tareas de soporte"},
+    //     ], 
+    //     from:"Oct 2017", 
+    //     to:"Feb 2018", 
+    //     location:"Epower, Caracas - Venezuela"
+    // },
     {
         title: "DEVELOPER",
         description: [
@@ -121,6 +121,7 @@ export const experiences = [
         title: "SENIOR DEVELOPER",
         description:  [
             {item: "Desarrollar soluciones en stack MEAN (Mongo Express Angular y Node)"}, 
+            {item: "Dev OPS"}, 
             {item: "Mantener y supervizar aplicaciones dasarrolladas previamente"},
             {item: "Revisar el código de otros desarrolladores"},
             {item: "Planificar el desarrollo de nuevos proyectos"},
@@ -185,3 +186,38 @@ export const posts = [
         "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Faie.edu.au%2Fwp-content%2Fuploads%2F2018%2F03%2Fgame-programming-03.jpg",
     },
   ];
+
+
+
+  export const messages = [
+    {
+     
+        description: "Mi experiencia con AngularJS, Node.js y Next.js me permite crear aplicaciones web modernas y enriquecer la experiencia del usuario, a la vez que me permite escalar y mejorar el rendimiento de aplicaciones web.",
+        sended:true, 
+    },
+    {
+ 
+        description: "Mi habilidad para trabajar con Docker me permite crear entornos de desarrollo estables y fáciles de replicar, lo que me permite aumentar la eficiencia en el desarrollo de aplicaciones.a",
+        sended:false, 
+    },
+    {
+ 
+        description: "Dominio de tecnologías clave como Docker, AngularJS, Node.js, Next.js y MongoDB me permite crear soluciones escalables y eficientes. ",
+        sended:true, 
+    },
+    {
+      
+        description: "Conocimientos en DevOps, como automatización y entrega continua, me permiten desplegar rápidamente y resolver problemas de manera ágil",
+        sended:false, 
+    },
+    {
+    
+        description: " El dominio de Solidity y su uso en el desarrollo de contratos inteligentes en Ethereum me permite crear soluciones descentralizadas y escalables para la creación de dApps.",
+        sended:true, 
+    },
+    {
+    
+        description: "Mis conocimientos en desarrollo de blockchain con Node.js me permite crear soluciones escalables y de alto rendimiento para aplicaciones descentralizadas, lo que me permite ser un desarrollador de vanguardia en el campo de las criptomonedas y tecnologías blockchain",
+        sended:false, 
+    },
+]

@@ -8,3 +8,5 @@ out
 
 .env
 .env.local
+
+yarn.lock
