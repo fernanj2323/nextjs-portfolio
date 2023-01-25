@@ -1,22 +1,100 @@
+/* background-color: #4a4c5dca;  background-color: #242944f0; */
+
+
+
+/* #11151c */
+/* #212d40 */
+/* #364156 */
+/* #7d4e57 */
+/* #d66853 */
 :root {
-    /* Your default theme */
-    --background: white;
-    --foreground: black;
+    --light-primary-bg-color: #311b92;
+    --light-primary-light-color: #534bae;
+    --light-primary-dark-color: #000063;
+    --light-primary-text-color: #edf0f2;
+
+
+    --light-secondary-bg-color: #eceff1;
+    --light-secondary-light-color: #ffffff;
+    --light-secondary-dark-color: #babdbe;    
+
+    --light-secondary-super-dark-color: #6d7173;  
+
+    --light-tertiary-bg-color: #00b8d4;
+    --light-tertiary-light-color:rgb(24, 228, 184);
+    --light-tertiary-dark-color:  #0088a3;
+
+    --message-send-color: #242944f0;
+    --message-receiver-color: #4a4c5dca;
   }
-  
-  [data-theme='dark'] {
-    --background: black !important;
-    --foreground: white;
-  }
 
 
+  body {
+    font-family: "Montserrat", sans-serif !important;
+}
+nav{
+    position: fixed !important;
+    width: 100vw;
+    z-index: 10;
+}
 
+header{
+    margin-top: 100px !important;
+}
 
+.btn-dark{
+    background-color: var( --message-receiver-color);
+    color: var( --light-secondary-light-color);
+}
 
 
 .card{
-    background-color: #d6d7e1f0;
+    background-color: var(--light-secondary-light-color);
+    -webkit-box-shadow: 0px 0px 38px -24px var(--light-secondary-dark-color);
+    -moz-box-shadow: 0px 0px 38px -24px var(--light-secondary-dark-color);
+    box-shadow: 0px 0px 38px -24px var(--light-secondary-dark-color);
 }
+
+.card-first-color{
+
+    background-color: var(--light-secondary-bg-color) !important;
+
+}
+.dark-text{
+    color : var(--message-send-color) !important
+}
+
+.card-second-color{
+    background-color: var(--light-tertiary-light-color);
+    background-color: var(--light-secondary-dark-color);
+    color:var(--light-primary-dark-color);
+
+}
+.card-active-color{
+    background-color: var(--light-primary-light-color);
+    color:var(--light-secondary-light-color);
+
+}
+.bar-color{
+    background-color: var(--message-send-color);
+
+
+}
+
+.nav-color{
+    background-color: var(--light-primary-bg-color);
+ 
+}
+
+
+
+.navbar-brand{
+    color: var( --light-primary-text-color);
+}
+.navbar-brand:hover{
+    color: var(--light-tertiary-light-color);
+}
+
 
 
 .bg-dark{
@@ -28,9 +106,16 @@
  .bg-dark-wall{
     /* color: whitesmoke; */
     transition: all 1.5s;
-    background-color: rgb(137, 138, 145) !important;
+    background-color: var(--light-primary-bg-color) !important;
     height: 100%;
     min-height: 100vh;
+}
+.bg-light-wall{
+    transition: all 1.5s;
+    background-color: var( --light-secondary-bg-color) !important;
+    height: 100%;
+    min-height: 100vh;
+
 }
 .bg-dark-wall-portfolio{
     /* color: whitesmoke; */
@@ -114,8 +199,9 @@
     background-color: #353743f0 !important;
 }
 .messages-color{
-    border : rgb(94, 99, 98) solid 1px ;
-    background-color: #d6d7e1f0;
+    border : rgba(132, 144, 142, 0.55) solid 1px ;
+    background-color:var(--light-primary-light-color);
+    background-color:var(--light-secondary-dark-color);
 }
 
 
@@ -152,8 +238,8 @@
   }
   .head-profile-color{
 
-    color:rgb(28, 146, 120);
-  
+   
+     color: var(--light-tertiary-dark-color);
   }
 
   .head-profile:hover{
@@ -180,6 +266,10 @@
 
 .head-name{
     width: 50%;
+    color: var(--light-primary-dark-color);
+    font-weight: bold !important;
+    font-size: 27.89px !important;
+    padding-left: 10px;
 }
 
 .messages-content{
@@ -187,15 +277,15 @@
     flex-direction: column;
     margin: 5px;
     /* border : rgb(255, 150, 127) solid 1px ; */
-    background-color: rgba(36, 44, 52, 0.676);
+    background-color: var(--light-secondary-bg-color);
     /* border-radius: 30px; */
-    height: 70%;
+    height: 60%;
     padding-left: 30px;
     padding-right: 30px;
 
     min-height: 200px;
     height: auto;
-    max-height: 450px;
+    max-height: 400px;
     overflow-y: auto;
 
     padding-top: 50px;
@@ -282,13 +372,11 @@
 
   .message-send-color{
 
-    background-color:#4a4c5dca;
-    color:rgba(255, 255, 255, 0.815); 
+    animation: transparency1 1.5s forwards
 }
 
 .message-received-color{
-    background-color:#242944f0;
-    color:rgba(255, 255, 255, 0.815); 
+    animation: transparency 1.5s forwards
 }
 
 
@@ -302,12 +390,12 @@
 
   @keyframes transparency1 {
     from { background-color: transparent; }
-    to { background-color: #4a4c5dca; }
+    to {   background-color:var(--light-primary-bg-color); }
   }
 
   @keyframes transparency {
     from { background-color: transparent; }
-    to { background-color: #242944f0; }
+    to {  background-color:var(  --message-receiver-color); }
   }
 @keyframes blinking {
     /* 0% {border-color: transparent}
@@ -319,6 +407,13 @@
 .buttons-flex{
     display: flex;
     justify-content: end;
+    align-items: center;
+    /* background-color: #242944f0; */
+  
+}
+.buttons-flex-center{
+    display: flex;
+    justify-content: center !important;
     align-items: center;
     /* background-color: #242944f0; */
   
@@ -336,6 +431,39 @@
 
 
 }
+
+.btn-rounded-big{
+    width: 55px;
+    height: 34px;
+    border-radius: 10px;
+    border: solid 1px #242944f0; 
+    color: #242944f0;
+    padding: 0.1px;
+    background-color: rgb(245, 245, 245);
+    transition: all 0.34s;
+
+
+}
+.btn-rounded-big:hover{
+    width: 55px;
+    height: 34px;
+    border-radius: 10px;
+    border: solid 1px #242944f0; 
+    color: #242944f0;
+    background-color: whitesmoke;
+    padding: 0.1px;
+}
+
+
+.btn-rounded-big > svg {
+    width: 21px !important;
+    height:21px !important;
+
+
+}
+
+
+
 .animate__fadeIn{
     transition: all 1.5s !important;
     /* background-color: aqua !important; */
@@ -400,25 +528,30 @@ height: 30px !important; */
   
 }
 
+
+
+
 .nav-page{
     width: 200px;
     height: 27px;
-      background-color: rgb(109, 113, 116);
+      background-color: var(--light-secondary-dark-color);
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top:20px;
-   border: 1px solid rgba(0, 0, 0, 0.531);
-   color:rgb(24, 228, 184);
-   cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.531);
+    color: var(--light-primary-bg-color);
+    cursor: pointer;
 }
-
+.color-active{
+    background-color: var(--light-primary-light-color) !important;
+}
 .nav-page:hover{
     width: 200px;
     height: 27px;
-      background-color:rgb(24, 228, 184);;
+      background-color: var(--light-tertiary-light-color) !important;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       display: flex;
@@ -431,7 +564,11 @@ height: 30px !important; */
    z-index: 10;
 }
 
-
+.active-page{
+    background-color: var(--light-tertiary-light-color);
+    font-weight: bold;
+    color: rgb(253, 253, 253);
+}
 
 .firts-page{
     z-index: 5;
@@ -456,7 +593,7 @@ height: 30px !important; */
     overflow-y: auto;
 }
 .padding-top0{
-    padding-top:0px;
+    /* padding-top:0px; */
     margin-top: -10px;
 }
 
@@ -531,5 +668,47 @@ height: 30px !important; */
         padding-bottom: 10px;
         padding-top:10px;
     }
+    
+    .navbar-toggler{
+        /* display: block !important; */
+        /* background-color: red !important; */
+        border: solid 1px rgba(255, 0, 0, 0);
+    }
+
+
+
+        .message-send{
+            border-radius: 15px;
+            font-size: 19px;
+            margin-left: 15px;
+            margin-right: 10px;
+
+            padding: 12px;
+            padding-top: 10px;
+            margin-top:20px;
+            transition: all 1s;
+
+            width: 250px;
+           
+        }
+
+        .message-received{
+            font-size: 19px;
+            margin-left: 0px;
+            margin-right: 10px;
+
+            padding: 12px;
+            padding-top: 10px;
+            margin-top:20px;
+            transition: all 1s;
+
+            width: 250px;
+            animation: transparency 1.5s forwards
+        
+
+            
+    
+            
+        }
 
   }

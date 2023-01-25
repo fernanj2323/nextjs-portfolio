@@ -5,6 +5,8 @@ import nProgress from "nprogress"
 import classNames from "classnames"
 import { useTheme } from 'next-themes'
 
+import Head from 'next/head';
+
 const Layout = ({ children, title, footer = true, dark = false  }) => {
     const { theme, setTheme } = useTheme()
     const router = useRouter()
@@ -25,16 +27,25 @@ const Layout = ({ children, title, footer = true, dark = false  }) => {
     }, [])
     
     return(
-        // className={dark ? 'bg-dark' : ''}
-        //  className={classNames({'bg-dark': dark, 'bg-light': !dark })}
-        <div   className={classNames(' ', {'bg-dark-wall': theme == 'dark'})}>
+    <>
+  <Head>
+        <title>Home App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
+        <div   className={classNames('bg-light-wall ', {'bg-dark-wall': theme == 'dark'})}>
      
             <Navbar />
             <main className="container py-4"> 
 
             {
             title && (
-                // className={classNames('text-center', {'text-light': dark})}
+                
                 <h1 >
                         {title}
                 </h1>
@@ -63,6 +74,9 @@ const Layout = ({ children, title, footer = true, dark = false  }) => {
                 )
             }
         </div>
+
+        </>
+
      )
     }
 

@@ -137,8 +137,8 @@ export const experiences = [
 
 export const projects = [
     {
-        name: "Lupaweb",
-        description: "Aplicacion de gestion para empresa del sector oil&gass",
+        name: "Project",
+        description: "Aplicacion de gestion para oil&gass",
         image: "img.png"
     },
     {
