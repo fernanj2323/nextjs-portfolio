@@ -8,24 +8,82 @@
 /* #7d4e57 */
 /* #d66853 */
 :root {
-    --light-primary-bg-color: #311b92;
-    --light-primary-light-color: #534bae;
-    --light-primary-dark-color: #000063;
-    --light-primary-text-color: #edf0f2;
+
+    /* topnav */
+    --light-primary-bg-color: #0b132b; 
+
+    /* cards actives backgrounds */
+    --light-primary-light-color: #1c2541;
 
 
-    --light-secondary-bg-color: #eceff1;
-    --light-secondary-light-color: #ffffff;
-    --light-secondary-dark-color: #babdbe;    
+    /* skils text color */
+    --light-skils-text-color: #ffffff;
+    /* bars color */
+    --light-brackground-bars: #3a506b;
 
-    --light-secondary-super-dark-color: #6d7173;  
 
-    --light-tertiary-bg-color: #00b8d4;
-    --light-tertiary-light-color:rgb(24, 228, 184);
-    --light-tertiary-dark-color:  #0088a3;
+    /* without use  */
+    /* --light-primary-dark-color: #13505b; */
 
-    --message-send-color: #242944f0;
-    --message-receiver-color: #4a4c5dca;
+    /* texto de nav bar  */
+    --light-primary-text-color: #ffffff;
+
+    /* background */
+    --light-secondary-bg-color: #ffffff;
+
+
+
+    /* topnav button */
+    /* background */
+    --light--actions-color: #3a506b; 
+    /* color  */
+    --light-secondary-light-color: #6fffe9;
+
+
+    /* profile name  */
+    /* color */
+    --profile--name-color: #0b132b;     
+    /* messages colors */
+    --message-send-color: #3a506b;
+    --message-receiver-color: #0b132b;
+
+    /* background chats color */
+    --light--chats-background-color: #5bc0be; 
+    --messages-border-color:  #22241e00;
+
+    /* linkeding buttons */
+    --light-active-linkedin-buttons: #5bc0be ; 
+    --light-color-linkedin-buttons: #0b132b ; 
+
+    /* maximizar and minimizar buttons */
+    --light-original-max-buttons: #ffffff ; 
+
+    
+    --light-active-max-button: #5bc0be ;
+
+
+    --light-active-color-buttons: #000000 ; 
+
+
+/* 
+    --light-hover-max-buttons: #0b132b ; */
+
+    --light-hover-max-buttons:#6fffe9 ; 
+
+    /* pages navs */
+    /* hover background */
+    --light-nav-hover-brackground: #6fffe9; 
+    /* hover color */
+    --light-nav-hover-color: #0b132b; 
+    
+
+    --light-tertiary-bg-color: #ffffff;
+    --light-tertiary-light-color:#ffffff;
+
+    /* profile title color */
+    --light-tertiary-dark-color:  #1c2541;
+    --profile-title-hover: #d0ff00; 
+
   }
 
 
@@ -43,13 +101,13 @@ header{
 }
 
 .btn-dark{
-    background-color: var( --message-receiver-color);
+    background-color: var( --light--actions-color);
     color: var( --light-secondary-light-color);
 }
 
 
 .card{
-    background-color: var(--light-secondary-light-color);
+    background-color: var(--light-secondary-bg-color);
     -webkit-box-shadow: 0px 0px 38px -24px var(--light-secondary-dark-color);
     -moz-box-shadow: 0px 0px 38px -24px var(--light-secondary-dark-color);
     box-shadow: 0px 0px 38px -24px var(--light-secondary-dark-color);
@@ -66,17 +124,17 @@ header{
 
 .card-second-color{
     background-color: var(--light-tertiary-light-color);
-    background-color: var(--light-secondary-dark-color);
-    color:var(--light-primary-dark-color);
+    /* background-color: var(--light-secondary-dark-color); */
+    color:var(--light-tertiary-dark-color);
 
 }
 .card-active-color{
     background-color: var(--light-primary-light-color);
-    color:var(--light-secondary-light-color);
+    color:var(--light-skils-text-color);
 
 }
 .bar-color{
-    background-color: var(--message-send-color);
+    background-color: var(--light-brackground-bars);
 
 
 }
@@ -196,12 +254,12 @@ header{
 
 .messages-dark-color{
     border : rgb(94, 99, 98) solid 1px  ;
-    background-color: #353743f0 !important;
+    background-color:var(--messages-border-color) !important;
 }
 .messages-color{
-    border : rgba(132, 144, 142, 0.55) solid 1px ;
-    background-color:var(--light-primary-light-color);
-    background-color:var(--light-secondary-dark-color);
+    border : var( --messages-border-color) solid 0.4px ;
+
+    background-color:var(--light--chats-background-color);
 }
 
 
@@ -248,7 +306,7 @@ header{
     padding-left: 0px;
     font-weight: bold;
     font-size: 13px;
-    color:rgb(24, 228, 184);
+    color: var(--profile-title-hover);
     /* background-color: red; */
     text-align: right;
     padding-right: 30px;
@@ -266,7 +324,7 @@ header{
 
 .head-name{
     width: 50%;
-    color: var(--light-primary-dark-color);
+    color: var(--profile--name-color);
     font-weight: bold !important;
     font-size: 27.89px !important;
     padding-left: 10px;
@@ -390,7 +448,7 @@ header{
 
   @keyframes transparency1 {
     from { background-color: transparent; }
-    to {   background-color:var(--light-primary-bg-color); }
+    to {   background-color:var(--message-send-color); }
   }
 
   @keyframes transparency {
@@ -426,7 +484,7 @@ header{
     border: solid 1px #242944f0; 
     color: #242944f0;
     padding: 0.1px;
-    background-color: rgba(245, 245, 245, 0.229);
+    background-color: var(--light-original-max-buttons) ;
     transition: all 0.34s;
 
 
@@ -434,12 +492,12 @@ header{
 
 .btn-rounded-big{
     width: 55px;
-    height: 34px;
+    height: 34px; 
     border-radius: 10px;
     border: solid 1px #242944f0; 
-    color: #242944f0;
+    /* background-color: #ffffff; */
     padding: 0.1px;
-    background-color: rgb(245, 245, 245);
+
     transition: all 0.34s;
 
 
@@ -458,6 +516,7 @@ header{
 .btn-rounded-big > svg {
     width: 21px !important;
     height:21px !important;
+    
 
 
 }
@@ -474,8 +533,8 @@ header{
     height: 30px;
     border-radius: 10px;
     border: solid 1px #242944f0; 
-    color: #242944f0;
-    background-color: whitesmoke;
+    color: #442424f0;
+    background-color: var(--light-hover-max-buttons) !important;
     padding: 0.1px;
 }
 
@@ -497,15 +556,21 @@ height: 30px !important; */
     margin-right:10px; 
 }
 
-.btn-active{
-    background-color: #242944f0;
-    color: white;
+.btn-active-top-card{
+    background-color: var(--light-active-linkedin-buttons);
+    color: var(--light-color-linkedin-buttons);
 }
 
+.btn-active{
+    background-color: var(--light-active-max-button) !important;
+    color: var(--light-active-color-buttons);
+}
+
+
 .btn-inactive{
-    color: #242944f0;
+    color: #442b24f0;
     padding: 0.1px;
-    background-color: rgba(245, 245, 245, 0.229);
+    background-color: var(--light-original-max-buttons) !important;
 }
 
 
@@ -545,13 +610,16 @@ height: 30px !important; */
     color: var(--light-primary-bg-color);
     cursor: pointer;
 }
+
+
+
 .color-active{
     background-color: var(--light-primary-light-color) !important;
 }
 .nav-page:hover{
     width: 200px;
     height: 27px;
-      background-color: var(--light-tertiary-light-color) !important;
+      background-color: var(--light-nav-hover-brackground) !important;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       display: flex;
@@ -559,7 +627,7 @@ height: 30px !important; */
       justify-content: center;
       margin-top:20px;
    border: 1px solid rgba(0, 0, 0, 0.531);
-   color: black;
+   color: var(--light-nav-hover-color) !important;
    cursor: pointer;
    z-index: 10;
 }
