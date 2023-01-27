@@ -11,81 +11,77 @@
 
     /* topnav */
     --light-primary-bg-color: #0b132b; 
+    --dark-primary-bg-color: #0b132b;
 
     /* cards actives backgrounds */
-    --light-primary-light-color: #1c2541;
-
-
+    --light-primary-light-color: #0b132b;
+    --dark-primary-light-color: #5bc0be;
     /* skils text color */
     --light-skils-text-color: #ffffff;
+    --dark-skils-text-color: #0b132b;
     /* bars color */
     --light-brackground-bars: #3a506b;
-
-
-    /* without use  */
-    /* --light-primary-dark-color: #13505b; */
-
     /* texto de nav bar  */
     --light-primary-text-color: #ffffff;
-
     /* background */
     --light-secondary-bg-color: #ffffff;
-
-
-
+    --dark-secondary-bg-color: #0b132b;
     /* topnav button */
     /* background */
-    --light--actions-color: #3a506b; 
+    --light--actions-color: #1c2541c8; 
     /* color  */
-    --light-secondary-light-color: #6fffe9;
-
-
+    --light-secondary-light-color: #5bc0be;
     /* profile name  */
     /* color */
     --profile--name-color: #0b132b;     
+    --dark-profile--name-color: #5bc0be;   
     /* messages colors */
     --message-send-color: #3a506b;
     --message-receiver-color: #0b132b;
+    --dark-message-send-color: #5bc0be;
+    --dark-message-receiver-color: #3a506b;
 
     /* background chats color */
     --light--chats-background-color: #5bc0be; 
     --messages-border-color:  #22241e00;
+    --dark--chats-background-color: #3a506b; 
+
 
     /* linkeding buttons */
     --light-active-linkedin-buttons: #5bc0be ; 
     --light-color-linkedin-buttons: #0b132b ; 
-
     /* maximizar and minimizar buttons */
-    --light-original-max-buttons: #ffffff ; 
-
-    
-    --light-active-max-button: #5bc0be ;
-
-
-    --light-active-color-buttons: #000000 ; 
-
-
-/* 
-    --light-hover-max-buttons: #0b132b ; */
-
-    --light-hover-max-buttons:#6fffe9 ; 
-
+    --light-original-max-buttons: #ffffff; 
+    --light-active-max-button: #6fffe9;
+    --light-active-color-buttons: #000000; 
+    --light-hover-max-buttons:#6fffe9; 
     /* pages navs */
     /* hover background */
     --light-nav-hover-brackground: #6fffe9; 
     /* hover color */
     --light-nav-hover-color: #0b132b; 
-    
-
     --light-tertiary-bg-color: #ffffff;
     --light-tertiary-light-color:#ffffff;
+    --dark-tertiary-light-color:#1c2541;
 
     /* profile title color */
+
     --light-tertiary-dark-color:  #1c2541;
+    --dark-tertiary-dark-color:  #ffffff;
+
+
     --profile-title-hover: #d0ff00; 
 
-  }
 
+    /* pages navegations  */
+    --dark-nav-dark-color: #3a506b ; 
+    --dark-nav-active-color: #5bc0be ; 
+    --dark-nav-active-text: #0b132b ; 
+    --dark-nav-first-color: #1c2541 ; 
+  }
+  img{
+    border-radius: 20px;
+  }
 
   body {
     font-family: "Montserrat", sans-serif !important;
@@ -113,26 +109,58 @@ header{
     box-shadow: 0px 0px 38px -24px var(--light-secondary-dark-color);
 }
 
+.card-dark{
+    background-color: var(--dark-tertiary-light-color);
+    -webkit-box-shadow: 0px 0px 38px -24px var(--dark-secondary-dark-color);
+    -moz-box-shadow: 0px 0px 38px -24px var(--dark-secondary-dark-color);
+    box-shadow: 0px 0px 38px -24px var(--dark-secondary-dark-color);
+}
+
 .card-first-color{
 
     background-color: var(--light-secondary-bg-color) !important;
 
 }
+
+.dark-card-first-color{
+
+    background-color: var( --dark-nav-first-color) !important;
+
+}
+
+.w-text{
+    color:white !important;
+}
+
+
 .dark-text{
     color : var(--message-send-color) !important
 }
 
 .card-second-color{
     background-color: var(--light-tertiary-light-color);
-    /* background-color: var(--light-secondary-dark-color); */
     color:var(--light-tertiary-dark-color);
 
 }
+.dark-card-second-color{
+    background-color: var(--dark-tertiary-light-color) !important;
+    color:var(--dark-tertiary-dark-color) !important;
+
+}
+
+
 .card-active-color{
     background-color: var(--light-primary-light-color);
     color:var(--light-skils-text-color);
 
 }
+.dark-card-active-color{
+    background-color: var(--dark-primary-light-color) !important;
+    color:var(--dark-skils-text-color);
+
+}
+
+
 .bar-color{
     background-color: var(--light-brackground-bars);
 
@@ -143,7 +171,10 @@ header{
     background-color: var(--light-primary-bg-color);
  
 }
-
+.dark-navbar{
+    background-color: var(--dark-primary-bg-color);
+ 
+}
 
 
 .navbar-brand{
@@ -164,21 +195,22 @@ header{
  .bg-dark-wall{
     /* color: whitesmoke; */
     transition: all 1.5s;
-    background-color: var(--light-primary-bg-color) !important;
+    background-color: var( --dark-secondary-bg-color) !important;
     height: 100%;
     min-height: 100vh;
 }
 .bg-light-wall{
     transition: all 1.5s;
-    background-color: var( --light-secondary-bg-color) !important;
+    background-color: var( --light-secondary-bg-color) ;
     height: 100%;
     min-height: 100vh;
 
 }
+
 .bg-dark-wall-portfolio{
     /* color: whitesmoke; */
     transition: all 1.5s;
-    background-color: rgba(181, 193, 211, 0.198) !important;
+    background-color: var( --dark-secondary-bg-color) !important;
     height: 100%;
 }
 
@@ -252,16 +284,16 @@ header{
 
 }
 
-.messages-dark-color{
-    border : rgb(94, 99, 98) solid 1px  ;
-    background-color:var(--messages-border-color) !important;
-}
+
 .messages-color{
     border : var( --messages-border-color) solid 0.4px ;
 
     background-color:var(--light--chats-background-color);
 }
-
+.messages-dark-color{
+    border : var( --messages-border-color) solid 0.4px ;
+    background-color:var(--dark--chats-background-color);
+}
 
 .messages-header{
     /* border : rgb(255, 150, 127) solid 1px ; */
@@ -300,21 +332,21 @@ header{
      color: var(--light-tertiary-dark-color);
   }
 
-  .head-profile:hover{
+  /* .head-profile:hover{
     align-self: center;
     width: 50%;
     padding-left: 0px;
     font-weight: bold;
     font-size: 13px;
     color: var(--profile-title-hover);
-    /* background-color: red; */
+
     text-align: right;
     padding-right: 30px;
     font-size: 18px;
    
     text-decoration: underline;
     cursor: pointer;
-  }
+  } */
 
 
 .messages-header > h1 {
@@ -325,6 +357,14 @@ header{
 .head-name{
     width: 50%;
     color: var(--profile--name-color);
+    font-weight: bold !important;
+    font-size: 27.89px !important;
+    padding-left: 10px;
+}
+
+.dark-head-name{
+    width: 50%;
+    color: var(--dark-profile--name-color);
     font-weight: bold !important;
     font-size: 27.89px !important;
     padding-left: 10px;
@@ -351,7 +391,27 @@ header{
 
     margin-bottom: 20px;
 }
+.dark-messages-content{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    /* border : rgb(255, 150, 127) solid 1px ; */
+    background-color: var(--dark-secondary-bg-color) !important;
+    /* border-radius: 30px; */
+    height: 60%;
+    padding-left: 30px;
+    padding-right: 30px;
 
+    min-height: 200px;
+    height: auto;
+    max-height: 400px;
+    overflow-y: auto;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    margin-bottom: 20px;
+}
 
 
 
@@ -428,15 +488,21 @@ header{
   }
 
 
-  .message-send-color{
-
+.message-send-color{
     animation: transparency1 1.5s forwards
 }
+
+.dark-message-send-color{
+    animation: darktransparency1 1.5s forwards
+}
+
 
 .message-received-color{
     animation: transparency 1.5s forwards
 }
-
+.dark-message-received-color{
+    animation: darktransparency 1.5s forwards
+}
 
 
 
@@ -455,6 +521,18 @@ header{
     from { background-color: transparent; }
     to {  background-color:var(  --message-receiver-color); }
   }
+
+  @keyframes darktransparency1 {
+    from { background-color: transparent; }
+    to {   background-color:var(--dark-message-send-color); }
+  }
+
+  @keyframes darktransparency {
+    from { background-color: transparent; }
+    to {  background-color:var(  --dark-message-receiver-color); }
+  }
+
+
 @keyframes blinking {
     /* 0% {border-color: transparent}
     50% {border-color: black}
@@ -610,12 +688,33 @@ height: 30px !important; */
     color: var(--light-primary-bg-color);
     cursor: pointer;
 }
+.dark-nav-page{
+    width: 200px;
+    height: 27px;
+      background-color: var(--dark-nav-dark-color);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top:20px;
+    border: 1px solid rgba(0, 0, 0, 0.531);
+    color: var(--light-primary-bg-color);
+    cursor: pointer;
+}
 
 
 
 .color-active{
     background-color: var(--light-primary-light-color) !important;
 }
+
+.dark-color-active{
+    background-color: var( --dark-nav-active-color) !important;
+    color: var( --dark-nav-active-text) !important; ;
+}
+
+
 .nav-page:hover{
     width: 200px;
     height: 27px;
@@ -721,6 +820,52 @@ height: 30px !important; */
 }
 
 @media (max-width: 720px) {
+    .responsive-border-open-card{
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+    }
+    .m-responsive {
+        margin-top: 16px;
+    }
+    .border-top-radius-0{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    .border-top-radius-1{
+        border-top-left-radius: 20px;
+        border-top-right-radius:  20px;
+    }
+    .border-top-radius-2{
+        border-top-left-radius:  20px;
+        border-top-right-radius: 20px;
+    }
+    .border-bottom-radius-1{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    
+    }
+    .border-bottom-radius-2{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    
+    }
+    
+    .border-bottom-radius-0{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .buttons-flex-center{
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-top:10px;
+      
+    }
+
+
+
     .chart-open{
         width: 90vw !important;
         height: 45vh !important;

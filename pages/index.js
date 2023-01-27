@@ -200,7 +200,7 @@ const Index = (   ) => {
                 <div className='col-md-12'> 
 
 
-                <div className={classNames(' card card-body  card-active-color animate__animated animate__fadeIn border-top-radius-0 border-bottom-radius-0', {'bg-dark': theme == 'dark'})} >
+                <div className={classNames(' card card-body  card-active-color animate__animated animate__fadeIn border-top-radius-0 border-bottom-radius-0', {'dark-card-active-color': theme == 'dark'})} >
                         
                         <div className='row'> 
 
@@ -245,7 +245,7 @@ const Index = (   ) => {
                                     {/* head */}
                                     <div  className={classNames('messages-header  messages-color', {'messages-dark-color': theme == 'dark'})} >
 
-                                        <div className="head-name">
+                                        <div className={classNames('head-name', {'dark-head-name': theme == 'dark'})} >
                                                      Fernando Piñango
                                              
                                         </div>
@@ -258,21 +258,21 @@ const Index = (   ) => {
 
                                     </div>
 
-                                    <div className="messages-content">
+                                    <div className={classNames('messages-content', {'dark-messages-content': theme == 'dark'})} >
                                        
                                         {   
                                             Messages.map(({ description, sended }, i )=> (
                                                 <div key={i}>
                                                     {
                                                         sended ? (
-                                                            <div className="message-send message-send-color">
+                                                            <div className={classNames('message-send message-send-color', {'dark-message-send-color': theme == 'dark'})} >
                                                             <p className='typed'>
                                                                     {description}
                                                                 </p>  
                                                             
                                                             </div>
                                                         ) : (
-                                                            <div className="message-received message-received-color">
+                                                            <div className={classNames('message-received message-received-color', {'dark-message-received-color': theme == 'dark'})}>
                                                                 <p className='typed'>
                                                                     {description}
                                                                 </p>  
@@ -332,11 +332,28 @@ const Index = (   ) => {
 
             {/* navs tabs */}
             {skilsSize == "open" ? (
-                <div className='display-flex'>   
-                    <div onClick={setFavoriteSk} className={classNames('nav-page firts-page '   , {'active-page color-active': favoriteFirst == 'skils'}  ) } >Skills</div>
-                    <div onClick={setFavoriteExp} className={classNames('nav-page firts-page '   , {'active-page card-first-color dark-text': favoriteFirst == 'experiences'}  ) }>Experience</div>
-                    <div onClick={setFavoritePort} className={classNames('nav-page firts-page '   , {'active-page color-active': favoriteFirst == 'portfolio'}  ) } >Portfolio</div>
-                </div>                
+
+         
+                // navegador night 
+                
+                    theme == "dark" ? ( 
+                        // navegador dark 
+                        <div className='display-flex'>   
+                        <div onClick={setFavoriteSk} className={classNames('dark-nav-page firts-page '   , {'active-page dark-color-active': favoriteFirst == 'skils'}  ) } >Skills</div>
+                        <div onClick={setFavoriteExp} className={classNames('dark-nav-page firts-page '   , {'w-text active-page dark-card-first-color ': favoriteFirst == 'experiences'}  ) }>Experience</div>
+                        <div onClick={setFavoritePort} className={classNames('dark-nav-page firts-page '   , {'active-page dark-color-active': favoriteFirst == 'portfolio'}  ) } >Portfolio</div>
+                    </div>  
+                    ): (
+                        // navegador light 
+                         <div className='display-flex'>   
+                        <div onClick={setFavoriteSk} className={classNames('nav-page firts-page '   , {'active-page color-active': favoriteFirst == 'skils'}  ) } >Skills</div>
+                        <div onClick={setFavoriteExp} className={classNames('nav-page firts-page '   , {'active-page card-first-color dark-text': favoriteFirst == 'experiences'}  ) }>Experience</div>
+                        <div onClick={setFavoritePort} className={classNames('nav-page firts-page '   , {'active-page color-active': favoriteFirst == 'portfolio'}  ) } >Portfolio</div>
+                    </div>           
+                    ) 
+
+
+
             ):(
                 <div className='display-block'>
                 </div>
@@ -344,12 +361,12 @@ const Index = (   ) => {
             }
                 {/* SKILLS  closed */}
                {skilsSize == "close" ? (
-                    <div  className='col-md-4 ' >    
+                    <div  className='col-md-4 m-responsive' >    
                         
                            
 
 
-                            <div  className={classNames('  card-second-color   card  card-body  animate__animated animate__fadeIn border-top-radius-1', {'bg-dark': theme == 'dark'})} >
+                            <div  className={classNames('   card-second-color   card  card-body  animate__animated animate__fadeIn border-top-radius-1', {'dark-card-second-color': theme == 'dark'})} >
 
                                 {/* header */}
                                 <div className="row col-md-12 red" >
@@ -391,7 +408,7 @@ const Index = (   ) => {
     
                             </div>    
 
-                            <div  className={classNames('  card-active-color card card-body  animate__animated animate__fadeIn max-height-1 border-bottom-radius-1', {'bg-dark': theme == 'dark'})} >
+                            <div  className={classNames('  card-active-color card card-body  animate__animated animate__fadeIn max-height-1 border-bottom-radius-1', {'dark-card-active-color': theme == 'dark'})} >
 
                                 {
                                     skills.map(({skill, percentage}, i )=> (
@@ -424,7 +441,7 @@ const Index = (   ) => {
                 ):( //is open 
                     favoriteFirst == "skils" ? (
                     <div  className='col-md-12' >    
-                        <div  className={classNames(' card-active-color card card-body  animate__animated animate__fadeIn border-top-radius-2 border-bottom-radius-0', {'bg-dark': theme == 'dark'})} >
+                        <div  className={classNames(' responsive-border-open-card card-active-color card card-body  animate__animated animate__fadeIn border-top-radius-2 border-bottom-radius-0', {'dark-card-active-color': theme == 'dark'})} >
                             <div className="card-body">
 
                                 {/* header */}
@@ -465,7 +482,7 @@ const Index = (   ) => {
                                 {/* chart  */}
 
 
-                                <div className= " card-first-color chart-box ">
+                                <div  className={classNames(' card-first-color chart-box', {'dark-card-second-color': theme == 'dark'})} >
                                     <canvas className='chart-open' id="myChart" ref={canvasEl} />
                                 </div>
                         
@@ -517,9 +534,9 @@ const Index = (   ) => {
             {skilsSize == "close"  ? (
 
                 <>
-                    <div className='col-md-8'>
+                    <div className='col-md-8 m-responsive'>
                             {/* className="card bg-light" */}
-                            <div  className={classNames(' card  card-body  animate__animated animate__fadeIn border-top-radius-2 border-bottom-radius-2', {'bg-dark': theme == 'dark'})} >
+                            <div  className={classNames(' card  card-body  animate__animated animate__fadeIn border-top-radius-2 border-bottom-radius-2', {'dark-card-second-color': theme == 'dark'})} >
                                 <div className="card-body">
                     
                                 {/* header */}
@@ -595,7 +612,7 @@ const Index = (   ) => {
             ):(
                 favoriteFirst == "experiences" ? (                    
                         <div className='col-md-12'>
-                            <div  className={classNames(' card card-body   animate__animated animate__fadeIn  border-top-radius-2 border-bottom-radius-0', {'bg-dark': theme == 'dark'})} >
+                            <div  className={classNames('responsive-border-open-card card card-body   animate__animated animate__fadeIn  border-top-radius-2 border-bottom-radius-0', {'dark-card-second-color': theme == 'dark'})} >
                                 <div className="card-body">
                     
                                 {/* header */}
@@ -677,9 +694,9 @@ const Index = (   ) => {
             {/* portfolio */}
             {skilsSize == "close"  ? (
                        <div className="row">
-                       <div className="col-md-12">
+                       <div className="col-md-12  m-responsive">
                            {/* className="card card-body "   */}
-                           <div  className={classNames('card-active-color card card-body  animate__animated animate__fadeIn border-top-radius-0 border-bottom-radius-0' , {'bg-dark': theme == 'dark'})} >
+                           <div  className={classNames('card-active-color card card-body  animate__animated animate__fadeIn border-top-radius-0 border-bottom-radius-0' , {'dark-card-active-color': theme == 'dark'})} >
                                <div className="row">
                                     {/* header */}
                                     <div className="row col-md-12 red" >
@@ -720,7 +737,7 @@ const Index = (   ) => {
                                            projects.map(({name,description,image}, i) =>(
                                            <div className="col-md-4 p-2" key={i}>
                                                {/* className="card h-100 " */}
-                                               <div   className={classNames('  card-second-color  card card-body  animate__animated animate__fadeIn border-top-radius-0 border-bottom-radius-0', {'bg-dark': theme == 'dark'})}>
+                                               <div   className={classNames('  card-second-color  card card-body  animate__animated animate__fadeIn border-top-radius-0 border-bottom-radius-0', {'dark-card-second-color': theme == 'dark'})}>
                                                    <div className="overflow">
                                                        <img className='card-img-top' src={`/${image}`} alt=''/>
                                                    </div>
@@ -745,7 +762,7 @@ const Index = (   ) => {
                     <div className="col-md-12 ">
                                   
 
-                        <div  className={classNames(' card-active-color card card-body   col-md-12  padding-top0  animate__animated animate__fadeIn border-top-radius-2 border-bottom-radius-0' , {'bg-dark': theme == 'dark'})} >
+                        <div  className={classNames(' responsive-border-open-card card-active-color card card-body   col-md-12  padding-top0  animate__animated animate__fadeIn border-top-radius-2 border-bottom-radius-0' , {'dark-card-active-color': theme == 'dark'})} >
 
                             <div className="row card-body">
                              {/* header */}
@@ -789,7 +806,7 @@ const Index = (   ) => {
                                     projects.map(({name,description,image}, i) =>(
                                                 <div className="col-md-4 p-2" key={i}>
                                              
-                                                    <div   className={classNames('card-second-color border-top-radius-0 border-bottom-radius-0  card card-body  animate__animated animate__fadeIn', {'bg-dark': theme == 'dark'})}>
+                                                    <div   className={classNames('card-second-color border-top-radius-0 border-bottom-radius-0  card card-body  animate__animated animate__fadeIn', {'dark-card-second-color': theme == 'dark'})}>
                                                         <div className="overflow">
                                                             <img className='card-img-top' src={`/${image}`} alt=''/>
                                                         </div>

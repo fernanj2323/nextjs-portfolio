@@ -9,22 +9,12 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme()
   return (
  
-    <nav   className={classNames('navbar navbar-expand-lg nav-color', {'bg-dark': theme == 'dark'})} >
+    <nav   className={classNames('navbar navbar-expand-lg nav-color', {'dark-navbar': theme == 'dark'})} >
       <div className="container">
         <Link href="/" legacyBehavior>
           <a className="navbar-brand"   >Portfolio</a>
         </Link>
-        {/* <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button> */}
+
         <div className="navbar-toggler">
                 {
                 theme == "dark" ? (
@@ -34,7 +24,7 @@ const Navbar = () => {
                 ) }
 
           
-          </div>
+        </div>
 
 
         <div className="collapse navbar-collapse flex" id="navbarNav">
