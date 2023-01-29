@@ -13,6 +13,6 @@
 - Bootswatch 4
 
 # Next Portfolio
-![](./portfolio.jpg)
+![](./public/portfolio.jpg)
 
 
