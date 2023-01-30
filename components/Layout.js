@@ -56,7 +56,7 @@ const Layout = ({ children, title, footer = true, dark = false  }) => {
 
             {
                 footer && (
-                    <footer className="bg dark  text-center">
+                    <footer  className={classNames('footer-color-text  text-center', {'dark-footer-color-text': theme == 'dark'})} >
                         <div className="container p-4">
 
                             <h4>

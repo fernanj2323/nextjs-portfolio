@@ -734,7 +734,7 @@ const Index = (   ) => {
                                                </div>
                                        
                                        {
-                                           projects.map(({name,description,image}, i) =>(
+                                           projects.map(({name,description,image, linkExist, link}, i) =>(
                                            <div className="col-md-4 p-2" key={i}>
                                                {/* className="card h-100 " */}
                                                <div   className={classNames('  card-second-color  card card-body  animate__animated animate__fadeIn border-top-radius-0 border-bottom-radius-0', {'dark-card-second-color': theme == 'dark'})}>
@@ -742,10 +742,18 @@ const Index = (   ) => {
                                                        <img className='card-img-top' src={`/${image}`} alt=''/>
                                                    </div>
                    
-                                                   <div className="card-body">
+                                                   <div className="card-body card-1-max-size ">
                                                        <h3>{name}</h3>
                                                        <p>{description}</p>
-                                                       <a href=""> Know more</a>
+                                                       {
+                                                        linkExist ? (
+                                                            <a  className={classNames(' linked-text-color', {'dark-linked-text-color': theme == 'dark'})}   target="_blank"  href={link}> Know more</a>
+                                                        )
+                                                        :(
+                                                            <b  className={classNames(' linked-text-color', {'dark-linked-text-color': theme == 'dark'})} >Comming soon</b>
+                                                        )
+                                                       }
+                                                       
                                                    </div>
                                                </div>
                                            </div>
@@ -803,7 +811,7 @@ const Index = (   ) => {
                             </div>
                                         
                                     {
-                                    projects.map(({name,description,image}, i) =>(
+                                    projects.map(({name,description,image, linkExist, link}, i) =>(
                                                 <div className="col-md-4 p-2" key={i}>
                                              
                                                     <div   className={classNames('card-second-color border-top-radius-0 border-bottom-radius-0  card card-body  animate__animated animate__fadeIn', {'dark-card-second-color': theme == 'dark'})}>
@@ -811,11 +819,19 @@ const Index = (   ) => {
                                                             <img className='card-img-top' src={`/${image}`} alt=''/>
                                                         </div>
                         
-                                                        <div className="card-body">
-                                                            <h3>{name}</h3>
-                                                            <p>{description}</p>
-                                                            <a href=""> Know more</a>
-                                                        </div>
+                                                        <div className="card-body card-1-max-size ">
+                                                       <h3>{name}</h3>
+                                                       <p>{description}</p>
+                                                       {
+                                                        linkExist ? (
+                                                            <a  className={classNames(' linked-text-color', {'dark-linked-text-color': theme == 'dark'})} target="_blank"  href={link}> Know more</a>
+                                                        )
+                                                        :(
+                                                            <b  className={classNames(' linked-text-color', {'dark-linked-text-color': theme == 'dark'})} >Comming soon</b>
+                                                        )
+                                                       }
+                                                       
+                                                   </div>
                                                     </div>
                                                 </div>
                                     ))
@@ -843,58 +859,7 @@ const Index = (   ) => {
 
 
 
-// export function getServerSideProps(){
 
-//     const resultados = []
-
-//     const actual = messages[0]
-//     resultados.push( actual)
-
-//     return {
-//         props:{ 
-//             Messages:resultados
-        
-//         }
-//       }  
-
-//     //   Messages = resultados;
-
-
-// }
-
-// export function handleClick(){
-
-//     console.log("handleClick", countClick)
-     
-
-//     countClick = countClick + 1 
-
-
-
-//     // // const resultados =  props.push(messages[countClick])
-//     var resultados = []
-
-
-
-//     for  (let i = 0; i < countClick; i++)  {
-//         const actual = messages[i]
-//         resultados.push( actual) 
-//     }
-
-//     console.log("increment like count", resultados)
-
-    
-//     return {
-//         props:{ 
-//             Messages:resultados
-        
-//         }
-//       }  
- 
- 
- 
- 
-//  }
  
 
 export function sleep(ms) {

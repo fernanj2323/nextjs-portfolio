@@ -72,46 +72,36 @@ export const skills = [
 
 
 export const experiences = [
-    // {
-    //     title: "Support Engineer",
-    //     description: [
-    //       {item: "Configuracion de routers y swtiches cisco"}, 
-    //       {item: "Configuracion de dispositivos VOIP"},
-    //       {item: "Tareas de soporte"},
-    //     ], 
-    //     from:"Oct 2017", 
-    //     to:"Feb 2018", 
-    //     location:"Epower, Caracas - Venezuela"
-    // },
+
     {
         title: "DEVELOPER",
         description: [
-            {item: "Desarrollo fullstack en cake PHP"}, 
-            {item: "Desarrollo en HTML CSS y Javascript"},
-            {item: "Participacion en pequenos proyectos en React y Nodejs"},
+            {item: "CakePHP Fullstack development"}, 
+            {item: "HTML, CSS and Javascript development"},
+            {item: "Involvement in small MERN (Mongo Express React and Node) projects"},
           ], 
         from:"Mar 2018", 
-        to:"Ago 2019", 
+        to:"Aug 2019", 
         location:"Petroalianza, El prado - Venezuela"
     },
     {
         title: "FULLSTACK DEVELOPER",
         description: [
-            {item: "Desarrollar soluciones en stack MEAN (Mongo Express Angular y Node)"}, 
-            {item: "Mantener y supervizar aplicaciones dasarrolladas previamente"},
-            {item: "Participar en charlas de seguridad de la informacion"},
-            {item: "Optimizacion de aplicaciones anteriormente desarrolladas"},
+            {item: "MEAN (Mongo Express Angular and Node) fullstack development"}, 
+            {item: "Maintain and oversee previously developed applications"},
+            {item: "Participate in information security talks"},
+            {item: "Optimization of previously developed applications"},
           ], 
-        from:"Ago 2019", 
+        from:"Aug 2019", 
         to:"Feb 2021", 
         location:"Lupatech, Bogotá - Colombia"
     },
     {
         title: "SENIOR DEVELOPER",
         description:  [
-            {item: "Automatizacion de Scrapping y analisis de datos con Python"}, 
-            {item: "Participar en desarrollos en laravel"},
-            {item: "Implementacion de servicios en Node.js"},
+            {item: "Automations development with Python for webscrapping and data anlytics"}, 
+            {item: "Node.js microservices implementation"},
+            {item: "Participate in Laravel developments"},
           ], 
         from:"Oct 2021", 
         to:"Feb 2022", 
@@ -120,13 +110,14 @@ export const experiences = [
     {
         title: "SENIOR DEVELOPER",
         description:  [
-            {item: "Desarrollar soluciones en stack MEAN (Mongo Express Angular y Node)"}, 
+            {item: "MEAN (Mongo Express Angular and Node) fullstack development"}, 
             {item: "Dev OPS"}, 
-            {item: "Mantener y supervizar aplicaciones dasarrolladas previamente"},
-            {item: "Revisar el código de otros desarrolladores"},
-            {item: "Planificar el desarrollo de nuevos proyectos"},
-            {item: "Asignar tareas a desarrolladores internos y externos"},
-            {item: "Optimizacion de aplicaciones anteriormente desarrolladas"},
+            {item: "Maintain and oversee previously developed applications"},
+            {item: "Review and approve implementation of code from other developers"},
+            {item: "Plan the development of new projects"},
+            {item: "Assign tasks to internal and external developers"},
+            {item: "Participate in information security talks"},
+            {item: "Optimization of previously developed applications"},
           ], 
         from:"Feb 2022", 
         to:"Present", 
@@ -137,29 +128,26 @@ export const experiences = [
 
 export const projects = [
     {
-        name: "Project",
-        description: "Aplicacion de gestion para oil&gass",
-        image: "img.png"
+        name: "Cypnode",
+        // description: "Layer 1 instant messaging solution",
+        description: "Decentralized instant messaging solution",
+        image: "cypnode.png", 
+        linkExist: true, 
+        link: "http://cypnode.com"
     },
     {
-        name: "Elig",
-        description: "PWA para empresa de panama",
-        image: "img.png"
+        name: "Elige",
+        description: "PWA Business under construction",
+        image: "elig.png",
+        linkExist: false, 
+        link: ""
     },
     {
-        name: "Radar",
-        description: "PWA para empresa de panama",
-        image: "img.png"
-    },
-    {
-        name: "Portfolio (Next)",
-        description: "PWA para empresa de panama",
-        image: "img.png"
-    },
-    {
-        name: "Morpheus",
-        description: "PWA para empresa de panama",
-        image: "img.png"
+        name: "Nextjs Portfolio",
+        description: "NextJS portfolio ready to use, free for everyone",
+        image: "portfolio.jpg",
+        linkExist: true, 
+        link: "https://github.com/fernanj2323/nextjs-portfolio"
     },
 ]
 
@@ -192,32 +180,32 @@ export const posts = [
   export const messages = [
     {
      
-        description: "Mi experiencia con AngularJS, Node.js y Next.js me permite crear aplicaciones web modernas y enriquecer la experiencia del usuario, a la vez que me permite escalar y mejorar el rendimiento de aplicaciones web.",
+        description: "My experience with AngularJS, Node.js, and MongoDB allows me to create modern web applications and enhance the user experience, while allowing me to scale and improve the performance of web applications.",
         sended:true, 
     },
     {
  
-        description: "Mi habilidad para trabajar con Docker me permite crear entornos de desarrollo estables y fáciles de replicar, lo que me permite aumentar la eficiencia en el desarrollo de aplicaciones.a",
+        description: "My ability to work with Docker allows me to create stable and easily replicable development environments, which increases efficiency in application development",
         sended:false, 
     },
     {
  
-        description: "Dominio de tecnologías clave como Docker, AngularJS, Node.js, Next.js y MongoDB me permite crear soluciones escalables y eficientes. ",
+        description: "My knowledge in Scrum methodology allows me to work efficiently in a team, prioritize tasks, and ensure the delivery of high-quality products within agreed timelines",
         sended:true, 
     },
     {
       
-        description: "Conocimientos en DevOps, como automatización y entrega continua, me permiten desplegar rápidamente y resolver problemas de manera ágil",
+        description: "Knowledge in DevOps, such as automation and continuous delivery, allows me to quickly deploy and agilely resolve issues",
         sended:false, 
     },
     {
     
-        description: " El dominio de Solidity y su uso en el desarrollo de contratos inteligentes en Ethereum me permite crear soluciones descentralizadas y escalables para la creación de dApps.",
+        description: "Proficiency in Solidity and its use in developing smart contracts on Ethereum enables me to create scalable, decentralized solutions for dApp creation",
         sended:true, 
     },
     {
     
-        description: "Mis conocimientos en desarrollo de blockchain con Node.js me permite crear soluciones escalables y de alto rendimiento para aplicaciones descentralizadas, lo que me permite ser un desarrollador de vanguardia en el campo de las criptomonedas y tecnologías blockchain",
+        description: "My knowledge in blockchain development with Node.js allows me to create scalable and high-performance solutions for decentralized applications, making me a developer in the field of cryptocurrencies and blockchain technologies",
         sended:false, 
     },
 ]

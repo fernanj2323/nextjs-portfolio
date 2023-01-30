@@ -78,9 +78,49 @@
     --dark-nav-active-color: #5bc0be ; 
     --dark-nav-active-text: #0b132b ; 
     --dark-nav-first-color: #1c2541 ; 
+
+    --linked-text-color:#3a506b; 
+    --dark-linked-text-color:#6fffe9; 
+
+
+    /* footer */
+
+    --footer-color-text:  #0b132b ; 
+    --dark-footer-color-text: #6fffe9; 
   }
+
+
+.linked-text-color{
+    color: var(--linked-text-color);
+    text-decoration: none;
+}
+
+.dark-linked-text-color{
+    color: var(--dark-linked-text-color);
+    text-decoration: none;
+}
+
+
+.footer-color-text{
+    color: var(--footer-color-text);
+
+}
+
+.dark-footer-color-text{
+    color: var( --dark-footer-color-text);
+ 
+}
+
+.card-1-max-size{
+    /* height: 550px; */
+    height: 150px;
+}
+
+
   img{
-    border-radius: 20px;
+    border-radius: 20px !important;
+    height: 420px;
+
   }
 
   body {
@@ -390,6 +430,8 @@ header{
     padding-bottom: 50px;
 
     margin-bottom: 20px;
+
+    border-radius: 5px;
 }
 .dark-messages-content{
     display: flex;
@@ -411,6 +453,7 @@ header{
     padding-bottom: 50px;
 
     margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 
