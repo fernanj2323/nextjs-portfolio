@@ -68,6 +68,20 @@ export const skills = [
         percentage: 30, 
     },
 
+    {
+        skill: "RUST",
+        percentage: 25, 
+    },
+
+    {
+        skill: "Go",
+        percentage: 30, 
+    },
+
+    {
+        skill: "Lua",
+        percentage: 30, 
+    },
 ]
 
 
@@ -93,20 +107,20 @@ export const experiences = [
             {item: "Optimization of previously developed applications"},
           ], 
         from:"Aug 2019", 
-        to:"Feb 2021", 
+        to:"Feb 2022", 
         location:"Lupatech, Bogotá - Colombia"
     },
-    {
-        title: "SENIOR DEVELOPER",
-        description:  [
-            {item: "Automations development with Python for webscrapping and data anlytics"}, 
-            {item: "Node.js microservices implementation"},
-            {item: "Participate in Laravel developments"},
-          ], 
-        from:"Oct 2021", 
-        to:"Feb 2022", 
-        location:"MDS Digital, Bogotá - Colombia"
-    },
+    // {
+    //     title: "SENIOR DEVELOPER",
+    //     description:  [
+    //         {item: "Automations development with Python for webscrapping and data anlytics"}, 
+    //         {item: "Node.js microservices implementation"},
+    //         {item: "Participate in Laravel developments"},
+    //       ], 
+    //     from:"Oct 2021", 
+    //     to:"Feb 2022", 
+    //     location:"MDS Digital, Bogotá - Colombia"
+    // },
     {
         title: "SENIOR DEVELOPER",
         description:  [
