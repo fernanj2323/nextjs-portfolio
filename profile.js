@@ -110,17 +110,6 @@ export const experiences = [
         to:"Feb 2022", 
         location:"Lupatech, Bogotá - Colombia"
     },
-    // {
-    //     title: "SENIOR DEVELOPER",
-    //     description:  [
-    //         {item: "Automations development with Python for webscrapping and data anlytics"}, 
-    //         {item: "Node.js microservices implementation"},
-    //         {item: "Participate in Laravel developments"},
-    //       ], 
-    //     from:"Oct 2021", 
-    //     to:"Feb 2022", 
-    //     location:"MDS Digital, Bogotá - Colombia"
-    // },
     {
         title: "SENIOR DEVELOPER",
         description:  [
@@ -135,7 +124,7 @@ export const experiences = [
           ], 
         from:"Feb 2022", 
         to:"Present", 
-        location:"Lupatech, Bogotá - Colombia"
+        location:"Innergy, Bogotá - Colombia"
     },
 ]
 
@@ -147,7 +136,7 @@ export const projects = [
         description: "Decentralized instant messaging solution",
         image: "cypnode.png", 
         linkExist: true, 
-        link: "http://cypnode.com"
+        link: "https://cypnode.vercel.app/"
     },
     {
         name: "Elige",
